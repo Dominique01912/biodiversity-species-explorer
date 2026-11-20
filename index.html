@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Philippine biodiversity and help protect native species.">
+  <title>Biodiversity Group 1 | Species Explorer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Lora:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  </head>
+
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#" data-page="home">
+    <span class="brand-icon">🌿</span>
+    <span>
+      <b>Biodiversity<br>Group 1</b>
+      <small>Philippine Biodiversity</small>
+    </span>
+  </a>
+
+  <nav id="nav">
+    <button class="active" data-page="home">⌂ Home</button>
+    <button data-page="explore">⌕ Explore Species</button>
+    <button data-page="admin">⚙ Manage Species</button>
+    <button data-page="conservation">♧ Conservation</button>
+    <button data-page="about">ⓘ About</button>
+  </nav>
+
+  <button class="favorite-nav" data-page="favorites">
+    ♥ Favorites <span id="fav-count">0</span>
+  </button>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-container">
+
+      <div class="hero-copy">
+        <p class="eyebrow">BIODIVERSITY GROUP 1</p>
+
+        <h1>Discover the Wonders of Nature</h1>
+
+        <p>
+          Explore, learn, and help protect the incredible
+          species found across the Philippines.
+        </p>
+
+        <button class="primary" data-page="explore">
+          <svg width="16" height="16" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          Explore Species →
+        </button>
+      </div>
+
+      <div class="hero-tagline">
+        <span>Rich in Life.</span>
+        <span>Worth Protecting.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SUPABASE STATUS: HIDDEN BY CSS -->
+  <div id="connection-status" class="notice" style="margin:12px 0">
+    Connecting to Supabase…
+  </div>
+
+  <!-- APP CONTENT -->
+  <div id="app"></div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+
+  <div class="footer-main">
+
+    <div class="footer-about">
+      <div class="footer-brand">
+        <span class="footer-brand-icon">🌿</span>
+        <h2>Biodiversity<br>Group 1</h2>
+      </div>
+
+      <p class="footer-description">
+        Discover the amazing wildlife and natural treasures
+        of the Philippines. Learn about native species,
+        understand their importance, and help protect
+        our country's rich biodiversity for future generations.
+      </p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+
+      <ul class="footer-links">
+        <li>
+          <button type="button" data-page="home">⌂ Home</button>
+        </li>
+        <li>
+          <button type="button" data-page="explore">Explore Species</button>
+        </li>
+        <li>
+          <button type="button" data-page="conservation">Conservation</button>
+        </li>
+        <li>
+          <button type="button" data-page="about">About Us</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Our Mission</h3>
+
+      <p class="footer-note">
+        To promote awareness, appreciation, and conservation
+        of Philippine biodiversity through accessible
+        information and digital learning.
+      </p>
+
+      <p class="footer-note">
+        🌏 Protect Nature. Preserve Life.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      © 2026 Biodiversity Species Explorer.
+      All Rights Reserved.
+    </p>
+
+    <p class="footer-credit">
+      Philippine Biodiversity Awareness Project 🌿
+    </p>
+  </div>
+
+</footer>
+
+<!-- SPECIES DETAILS MODAL -->
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true"></div>
+
+<!-- SUPABASE -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
